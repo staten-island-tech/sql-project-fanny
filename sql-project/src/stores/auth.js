@@ -16,3 +16,8 @@ const getURL = () => {
       redirectTo: getURL()
     }
   }
+
+  let { data, error } = await supabase.from('users').select('user_id, name')
+
+// console.log(data)
+// Still => { id: 'd0714948', name: 'Jane' }
