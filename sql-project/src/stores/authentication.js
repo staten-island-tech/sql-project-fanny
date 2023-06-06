@@ -26,3 +26,9 @@ const App = () => (
     appearance={{ theme: ThemeSupa }}
   />
 )
+
+const loggedInUserId = 'd0714948'
+let { data, error } = await supabase.from('users').select('user_id, name')
+
+// console.log(data)
+// Still => { id: 'd0714948', name: 'Jane' }
