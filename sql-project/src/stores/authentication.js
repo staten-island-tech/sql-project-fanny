@@ -1,34 +1,19 @@
-import { createClient } from "@supabase/supabase-js";
-import { Auth } from "@supabase/auth-ui-react";
+const getURL = () => {
+  let url =
+    process?.env?.NEXT_PUBLIC_SITE_URL ?? // Set this to your site URL in production env.
+    process?.env?.NEXT_PUBLIC_VERCEL_URL ?? // Automatically set by Vercel.
+    'http://localhost:3000/';
+  // Make sure to include `https://` when not localhost.
+  url = url.includes('http') ? url : `https://${url}`;
+  // Make sure to including trailing `/`.
+  url = url.charAt(url.length - 1) === '/' ? url : `${url}/`;
+  return url;
+};
 
-const supabase = createClient(
-  "<INSERT PROJECT URL>",
-  "<INSERT PROJECT ANON API KEY>"
-);
+const { data, error } = await supabase.auth.signInWithOAuth({
+  provider: 'github'
+  options: {
+    redirectTo: getURL()
+  }
+})
 
-const App = () => <Auth supabaseClient={supabase} />;
-
-import { Auth } from '@supabase/auth-ui-react'
-import {
-  // Import predefined theme
-  ThemeSupa,
-} from '@supabase/auth-ui-shared'
-
-const supabase = createClient(
-  '<INSERT PROJECT URL>',
-  '<INSERT PROJECT ANON API KEY>'
-)
-
-const App = () => (
-  <Auth
-    supabaseClient={supabase}
-    {/* Apply predefined theme */}
-    appearance={{ theme: ThemeSupa }}
-  />
-)
-
-const loggedInUserId = 'd0714948'
-let { data, error } = await supabase.from('users').select('user_id, name')
-
-// console.log(data)
-// Still => { id: 'd0714948', name: 'Jane' }
