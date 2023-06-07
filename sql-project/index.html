@@ -1,13 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="main.js"></script>
+  <script type="module" src="style.css"></script>
+
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <nav class="navbar navbar-light bg-warning">
+      <a class="navbar-brand mr-auto" href="#" style="font-family:Snell Roundhand, cursive">
+        <i class="fa fa-leaf text-dark" text-info aria-hidden="true"></i> House living</a>
+      <div class="container text-right m-0" style="width: 160px">
+        <a href="" class="text-dark"><i class="social-icon fa fa-twitter-square fa-1x"></i></a>
+        <a href="" class="text-dark"><i class="social-icon fa fa-google-plus-square fa-1x"></i></a>
+        <a href="" class="text-dark"><i class="social-icon fa fa-facebook-square fa-1x"></i></a>
+        <a href="" class="text-dark"><i class="social-icon fa fa-instagram fa-1x"></i></a>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-sm btn-cart" data-toggle="dropdown"><i class="fa fa-shopping-cart text-dark fa-2x"
+            aria-hidden="true" style="cursor: pointer;"></i><span class="badge badge-danger">12</span>
+        </button>
+
+        <div class="dropdown-menu dropdown-menu-right" style="min-width: 300px;">
+          <div class="px-4 py-3">
+            <h6 class="text-center mb-5">Selected item</h6>
+            <table class="table table-sm">
+              <thead class="text-center">
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Number</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody class="text-center">
+                <tr>
+                  <td class="align-middle text-center">
+                    <div class="list-card">
+                      <a class="text-muted" href="#removeModal" data-toggle="modal" data-target="#removeModal"
+                        data-title=""><i class="fa fa-trash" aria-hidden="ture"></i></a>
+                      <img src="" alt="" />
+                    </div>
+                  </td>
+                  <td class="align-middle">Established</td>
+                  <td class="align-middle">1</td>
+                  <td class="align-middle text-right">$600</td>
+                </tr>
+                <tr>
+                  <td class="align-middle text-center">
+                    <div class="list-card">
+                      <a class="text-muted" href="#" data-toggle="modal" data-target="#removeModal" data-title=""><i
+                          class="fa fa-trash" aria-hidden="ture"></i></a>
+                      <img src="" alt="" />
+                    </div>
+                  </td>
+                  <td class="align-middle">Unchanged</td>
+                  <td class="align-middle">2</td>
+                  <td class="align-middle text-right">$1600</td>
+                </tr>
+                <tr>
+                  <td class="del align-middle text-center">
+                    <div class="list-card">
+                      <a class="text-muted" href="#" data-toggle="modal" data-target="#removeModal" data-title=""><i
+                          class="fa fa-trash" aria-hidden="ture"></i></a>
+                      <img src="" alt="" />
+                    </div>
+                  </td>
+                  <td class="align-middle">McClintock</td>
+                  <td class="align-middle">3</td>
+                  <td class="align-middle text-right">$2600</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <nav aria-label="breadcrumb" style="font-family:Didot, serif" class="d-flex">
+        <ol class="breadcrumb bg-transparent pl-0 mr-auto">
+
+          <li class="breadcrumb-item"><a class="text-dark" href="#">Home</a></li>
+          <li class="breadcrumb-item"><a class="text-dark" href="#">Lifestyle</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><a class="text-dark" href="">About us</a></li>
+
+        </ol>
+        <form class="form-inline">
+          <a class="btn btn-outline-dark mr-2 btn-sm" data-toggle="modal" data-target="#loginModal" href="">Log in</a>
+          <a class="btn btn-dark btn-sm" data-toggle="modal" data-target="#createModal" href="">Create</a>
+        </form>
+      </nav>
+      <div class="jumbotron jumbotron-fluid jumbotron-bg d-flex align-items-end">
+        <div class="container text-center">
+          <div class="bg-lighter p-3">
+            <h1 class="text-warning" style="font-family:Georgia, serif">Buy Home Furniture</h1>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="list-group list-group-flush sticky-top" style="top:5px;font-family:Didot, serif">
+              <a class="list-group-item list-group-item-action text-secondary  active" href="#pane-1"
+                data-toggle="list">
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card text-center h-80 border-0 box-shadow"><img class="card-img-top" src=""
+                style="height: 250px;" alt="Card image cap" />
+              <div class="card-body">
+                <h5 class="card-title">Alteration</h5>
+                <div class="card-footer bg-white px-0">
+                  <div class="btn-group btn-group-sm"><a class="btn btn-outline-secondary"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card text-center h-80 border-0 box-shadow"><img class="card-img-top" src=""
+                  style="height: 250px;" alt="Card image cap" />
+                <div class="card-body">
+                  <h5 class="card-title">Purpose </h5>
+                  <div class="card-footer bg-white px-0">
+                    <div class="btn-group btn-group-sm"><a class="btn btn-outline-secondary" href="#">Sin</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card text-center h-80 border-0 box-shadow"><img class="card-img-top" src=""
+                    style="height: 250px;" />
+                  <div class="card-body">
+                    <h5 class="card-title">Readable</h5>
+                    <div class="card-footer bg-white px-0">
+                      <div class="btn-group btn-group-sm"><a class="btn btn-outline-secondary" href="#">Sin</a><a></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card text-center h-80 border-0 box-shadow"><img class="card-img-top" src=""
+                      style="height: 250px;" />
+                    <div class="card-body">
+                      <h5 class="card-title">Essentially</h5>
+                      <div class="card-footer bg-white px-0">
+                        <div class="btn-group btn-group-sm"><a class="btn btn-outline-secondary" href="#">Sin</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="row p-3">
+      <div class="col-md-4">
+        <div class="sticky-top" style="top: 10px;">
+          <h4 class="h2">Minimalist style</h4>
+          <div class="d-flex justify-content-end align-items-end mb-auto"><span class="text-muted">Price
+              $1299</span>
+            <div class="h3 ml-auto mb-0 text-danger"><small> Discount Price NT$</small><strong>1200</strong></div>
+          </div>
+          <hr />Type：
+          <div class="btn-group btn-group-toggle btn-group-sm" data-toggle="buttons">
+            <label class="btn btn-outline-secondary active disabled">
+              <input id="option1" type="radio" name="options" autocomplete="off" checked="" /> Simple
+            </label>
+            <label class="btn btn-outline-secondary">
+              <input id="option2" type="radio" name="options" autocomplete="off" /> North
+            </label>
+            <label class="btn btn-outline-secondary">
+              <input id="option3" type="radio" name="options" autocomplete="off" /> Fanlan
+            </label>
+          </div>
+          <div class="input-group mt-3">
+            <select class="form-control mr-1" name="" id="">
+              <option value="1">single</option>
+              <option value="2">tweens</option>
+              <option value="3">three</option>
+            </select><a class="btn btn-primary" href="#">Add Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header bg-warning">
+              <h5 class="modal-title" id="exampleModalLabel">Create</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="text-center mb-5">
+                <h3>Create new account</h3>
+                <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                  deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                  provident,
+                  similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+              </div>
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                    required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Check Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                    required>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+              </form>
+            </div>
+            <div class="modal-footer footerLink">
+              <a href="#" data-dismiss="modal" class="mr-auto" data-toggle="modal" data-target="#loginModal">Switch
+                to Log
+                in</a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header bg-light">
+              <h5 class="modal-title" id="exampleModalLabel">Log in</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email" required>
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                    required>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Log in</button>
+              </form>
+            </div>
+            <div class="modal-footer footerLink">
+              <a href="#" data-dismiss="modal" class="mr-auto" data-toggle="modal" data-target="#createModal">Switch
+                to
+                registration</a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
   </body>
+
 </html>
